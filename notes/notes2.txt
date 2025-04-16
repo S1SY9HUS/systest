@@ -1,0 +1,42 @@
+EXTERNAL
+
+ClamAV - https://www.networkworld.com/article/970780/using-clamav-to-detect-and-remove-viruses-on-linux.html
+
+Sysbench:
+
+sudo apt install sysbench
+sysbench --test=cpu run
+sysbench --test=memory run
+sysbench --test=fileio --file-test-mode=seqwr run 
+	** The file I/O test is a little different. You also need to tell it which type of I/O test to run. You can see the 	available tests by running the help command for the test**
+
+
+
+INTERNAL
+
+
+df (lets you see if file systems are full)
+
+lsattr (list file attributes on a Linux second extended file system)
+
+iostat (useful for monitoring I/O activities)
+
+ss (short for socket statistics, is a convenient tool that displays network socket information)
+
+top (shows system uptime, CPU usage, number of threads, memory usage (total, used, free, etc.), a list of running processes, etc.)
+
+lsof (quickly see the list of open files and associated processes)
+
+tcpdump (debug network issues, or to check traffic of any specific app or service on machines)
+
+ip a
+
+nslookup (followed by ip address - for dns error troubleshooting)
+
+
+
+
+
+SCRIPT:
+
+reference output of each command as variable so that email can be formatted nicely

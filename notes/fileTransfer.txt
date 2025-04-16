@@ -1,0 +1,4 @@
+scp test.txt techsupport@192.168.208.160:/home/techsupport/support_logs/OSYS2022-UB/
+
+
+echo -ne "date "+%D""

@@ -1,0 +1,56 @@
+https://www.hostinger.com/tutorials/how-to-install-and-setup-mail-server-on-ubuntu/
+
+IT Ticketing system that prompts user for employee id, offers drop-down issue options: 
+
+- network connection issues
+Runs the following: 
+uname -a
+ip a
+nmap -Pn -sV 192.168.208.148
+ping -c 4 google.com
+ss -s
+perf test
+top 
+
+
+- app crashing / won't open
+Runs the following: 
+uname -a
+ip a
+ping -c 4 google.com
+uptime
+iostat 
+nmap -Pn -sV 192.168.208.148
+systemctl list-units --type=service --all --no-pager
+top 
+free -m
+df -h
+lshw
+perf test -v
+journalctl -p 0..3 
+dmesg -l err,crit,alert,emerg
+tail /var/log/syslog
+
+
+- everything is on fire
+uname -a
+uptime
+ip a
+nmap -Pn -sV 192.168.208.148
+iostat 
+top 
+systemctl list-units --type=service --all --no-pager
+free -m
+df -h
+ss -s
+lshw
+perf test -v
+journalctl -p 0..3 
+dmesg -l err,crit,alert,emerg
+tail /var/log/syslog
+
+
+
+
+
+mail -a /opt/backup.sql -s "Backup File" user@example.com < /dev/null 
